@@ -24,17 +24,21 @@ using static System.Formats.Asn1.AsnWriter;
 //   c:\Exercise\ACME\data.txt
 // Посмотреть русский вывод:
 //   c:\Exercise\ACME\ru-RU\data.txt
-
+    
 // ----------- Code ----------- //
 
 string projectName = "ACME";
 string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
 string englishMessage = "View English output";
 
-Console.WriteLine(englishMessage + ":");
-Console.WriteLine($"\tc:\\Exercise\\{projectName}\\data.txt");
-Console.WriteLine(russianMessage + ":");
-Console.WriteLine($"\tc:\\Exercise\\{projectName}\\ru-RU\\data.txt");
+string englishLocation = $@"c:\Exercise\{projectName}\data.txt";
+string russianLocation = $@"c:\Exercise\{projectName}\ru-RU\data.txt";
+
+Console.WriteLine(englishMessage + ":\n\t" + englishLocation);    // v2
+Console.WriteLine(russianMessage + ":\n\t" + russianLocation);    // v2  
+
+//Console.WriteLine($"\tc:\\Exercise\\{projectName}\\data.txt");        // v1
+//Console.WriteLine($"\tc:\\Exercise\\{projectName}\\ru-RU\\data.txt"); // v1
 
 
 
