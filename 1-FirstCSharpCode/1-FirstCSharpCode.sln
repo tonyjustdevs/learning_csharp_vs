@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1-3-RussianMockApp", "1-3-R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1-4-BasicsNumericOperationsApp", "1-4-BasicsNumericOperationsApp\1-4-BasicsNumericOperationsApp.csproj", "{6254D6E7-3F87-4BAA-9921-79413FCD7E74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-4-FahrenheitToCelsiusApp", "1-4-FahrenheitToCelsiusApp\1-4-FahrenheitToCelsiusApp.csproj", "{49E77F2F-B601-4ACC-AAA5-47B37968B9AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1-4-FahrenheitToCelsiusApp", "1-4-FahrenheitToCelsiusApp\1-4-FahrenheitToCelsiusApp.csproj", "{49E77F2F-B601-4ACC-AAA5-47B37968B9AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-5-StudentGradingApp", "1-5-StudentGradingApp\1-5-StudentGradingApp.csproj", "{A125BACE-68AF-4B08-8FE2-C42762D862DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{49E77F2F-B601-4ACC-AAA5-47B37968B9AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49E77F2F-B601-4ACC-AAA5-47B37968B9AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49E77F2F-B601-4ACC-AAA5-47B37968B9AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A125BACE-68AF-4B08-8FE2-C42762D862DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A125BACE-68AF-4B08-8FE2-C42762D862DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A125BACE-68AF-4B08-8FE2-C42762D862DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A125BACE-68AF-4B08-8FE2-C42762D862DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
