@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1-4-FahrenheitToCelsiusApp"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-5-StudentGradingApp", "1-5-StudentGradingApp\1-5-StudentGradingApp.csproj", "{A125BACE-68AF-4B08-8FE2-C42762D862DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-6-FootballerRatingCalculatorApp", "1-6-StudentGPACalculatorApp\1-6-FootballerRatingCalculatorApp.csproj", "{F2DED000-BADC-47FF-B2D4-A94560CB11FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A125BACE-68AF-4B08-8FE2-C42762D862DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A125BACE-68AF-4B08-8FE2-C42762D862DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A125BACE-68AF-4B08-8FE2-C42762D862DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2DED000-BADC-47FF-B2D4-A94560CB11FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2DED000-BADC-47FF-B2D4-A94560CB11FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2DED000-BADC-47FF-B2D4-A94560CB11FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2DED000-BADC-47FF-B2D4-A94560CB11FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
