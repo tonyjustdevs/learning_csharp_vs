@@ -9,6 +9,13 @@ Earn The "Foundation C# with Microsoft Certificate" (from FreeCodeCamp and Micro
     - Work with variable data
     - Debugging
 
+
+------------
+  
+  
+[I'm Trackin My Progress Via Github Issues (and Github Tasks)](https://github.com/tonyjustdevs/learning_csharp_vs/issues)
+
+
 ------------
 
 **[It includes]**:
