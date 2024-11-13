@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-
+﻿
 Console.WriteLine("Welcome to Tony's Die Game 🎲🎲🎲! ");
 
 // 1. create die
@@ -13,8 +11,8 @@ int roll1 = die.Next(1,7);
 int roll2 = die.Next(1,7);
 int roll3 = die.Next(1,7);
 
-roll1=10;
-roll2=10;
+roll1=1;
+roll2=1;
 // roll3=10;
 int total = roll1 + roll2 + roll3;
 
@@ -36,8 +34,7 @@ if (total >= 15) // #60 15+ points = win
 {
   System.Console.WriteLine($"Winner winner, 🐔 dinner! ({total} points)");
 }
-
-if (total < 15) // #61 <15 points = lose
+else // #61 <15 points = lose
 {
   System.Console.WriteLine($"You lost, please try again! 👎 ({total} points)");
 }
