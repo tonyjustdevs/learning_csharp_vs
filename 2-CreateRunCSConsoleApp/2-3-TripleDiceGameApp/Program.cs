@@ -14,9 +14,9 @@ int roll1 = die.Next(1,7);
 int roll2 = die.Next(1,7);
 int roll3 = die.Next(1,7);
 
-roll1=1;
-roll2=10;
-roll3=10;
+roll1=4;
+roll2=4;
+roll3=4;
 int total = roll1 + roll2 + roll3;
 
 System.Console.WriteLine($"Total = roll1 + roll2 + roll3 = {roll1} + {roll2} + {roll3} = {total}");
@@ -35,15 +35,21 @@ if (roll1 == roll2 || roll1 == roll3 || roll2 == roll3)
 }
 
 
-if (total >= 15) // #60 15+ points = win
+if (total >= 16) 
 {
-  System.Console.WriteLine($"Winner winner, 🐔 dinner! ({total} points)");
+  System.Console.WriteLine($"You won a plane ✈️! ({total} points)");
 }
-else // #61 <15 points = lose
+else if (total > 10) 
 {
-  System.Console.WriteLine($"You lost, please try again! 👎 ({total} points)");
+  System.Console.WriteLine($"You won a car 🚗! ({total} points)");
+}
+else 
+{
+  System.Console.WriteLine($"You won a banana 🍌! ({total} points)");
 }
 
+
+// 66 win random ranged prizes
 
 Console.WriteLine("");
 Console.WriteLine("---------------------------------------");
