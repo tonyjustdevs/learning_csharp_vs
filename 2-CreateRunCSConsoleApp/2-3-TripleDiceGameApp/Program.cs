@@ -16,9 +16,12 @@ int total = roll1 + roll2 + roll3;
 
 System.Console.WriteLine($"Total = roll1 + roll2 + roll3 = {roll1} + {roll2} + {roll3} = {total}");
 
-// #60 15+ points = win
-
-if (total >= 15)
+if (total >= 15) // #60 15+ points= win
 {
   System.Console.WriteLine("Winner winner, 🐔 dinner!");
+}
+
+if (total < 15) // #60 15+ points= win
+{
+  System.Console.WriteLine("You lost, please try again! 👎");
 }
