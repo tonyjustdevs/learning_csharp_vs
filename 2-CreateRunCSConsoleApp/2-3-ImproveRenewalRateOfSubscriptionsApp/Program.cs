@@ -21,6 +21,8 @@ Console.WriteLine("");
 // "Your subscription expires within a day!"
 // "Renew now and save 20%!"
 
+// Rule 5: If the user's subscription has expired, display the message:
+// "Your subscription has expired."
 
 ///////////////////////// code /////////////////////////
 
@@ -28,12 +30,16 @@ Random random = new Random();
 int daysToExp = random.Next(12);
 int discountPct = 0;
 
+// daysToExp = 0; 
 // daysToExp = 1;
 // daysToExp = 5;
 // daysToExp = 10;
 
-
-if (daysToExp == 1) // rule 4:
+if (daysToExp == 0) // rule 5:
+{
+  System.Console.WriteLine($"Your subscription has expired.");
+} 
+else if (daysToExp == 1) // rule 4:
 {
   discountPct = 20;
   System.Console.WriteLine($"Your subscription expires within a day!");
