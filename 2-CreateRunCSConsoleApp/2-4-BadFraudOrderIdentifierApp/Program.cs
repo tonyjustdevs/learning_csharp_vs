@@ -8,7 +8,13 @@ Console.WriteLine("");
 
 string[] FraudulentOrderIds = new string[3];
 
-System.Console.WriteLine(FraudulentOrderIds);
+FraudulentOrderIds[0] = "A420";
+FraudulentOrderIds[1] = "B069";
+FraudulentOrderIds[2] = "C666";
+
+System.Console.WriteLine(FraudulentOrderIds[0]);
+System.Console.WriteLine(FraudulentOrderIds[1]);
+System.Console.WriteLine(FraudulentOrderIds[2]);
 
 Console.WriteLine("");
 Console.WriteLine("---------------------------------------");
