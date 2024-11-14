@@ -15,6 +15,7 @@ FraudulentOrderIds[2] = "C666";
 System.Console.WriteLine(FraudulentOrderIds[0]);
 System.Console.WriteLine(FraudulentOrderIds[1]);
 System.Console.WriteLine(FraudulentOrderIds[2]);
+System.Console.WriteLine(FraudulentOrderIds[3]); // Expected: run-time error
 
 Console.WriteLine("");
 Console.WriteLine("---------------------------------------");
