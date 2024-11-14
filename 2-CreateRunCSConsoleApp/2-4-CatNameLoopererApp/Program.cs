@@ -10,13 +10,29 @@ Console.WriteLine("");
 string[] CatNames = {"Oreo","Lilo","Stitch"};
 string[] CatNames2 = ["Mono","Ollie","Lucky"];
 
-System.Console.WriteLine(CatNames[0]);
-System.Console.WriteLine(CatNames[1]);
-System.Console.WriteLine(CatNames[2]);
+System.Console.WriteLine("Cool-Cats:");
+
+foreach (string item in CatNames)
+{
+  System.Console.Write(" - ");
+  System.Console.WriteLine(item);
+}
 System.Console.WriteLine("");
-System.Console.WriteLine(CatNames2[0]);
-System.Console.WriteLine(CatNames2[1]);
-System.Console.WriteLine(CatNames2[2]);
+System.Console.WriteLine("Chonky-Cats:");
+
+foreach (string item in CatNames2)
+{
+  System.Console.Write(" - ");
+  System.Console.WriteLine(item);
+}
+
+// System.Console.WriteLine(CatNames[0]);
+// System.Console.WriteLine(CatNames[1]);
+// System.Console.WriteLine(CatNames[2]);
+// System.Console.WriteLine("");
+// System.Console.WriteLine(CatNames2[0]);
+// System.Console.WriteLine(CatNames2[1]);
+// System.Console.WriteLine(CatNames2[2]);
 
 Console.WriteLine("");
 Console.WriteLine("---------------------------------------");
