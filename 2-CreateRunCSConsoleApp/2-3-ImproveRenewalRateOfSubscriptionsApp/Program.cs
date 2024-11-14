@@ -13,12 +13,15 @@ int discountPct = 0;
 // Rule 1: Your code should only display one message.
 // The message that your code displays will depend on the other five rules. 
 // For rules 2-6, the higher numbered rules take precedence over the lower numbered rules.
+// [tp: add if-else with 5 possibilities (rules 2 to 6) #77]
+
+// Rule 2: If the user's subscription will expire in 10 days or less, display the message:
+// "Your subscription will expire soon. Renew now!" #78
 
 
-// rule 1: add if-else with 5 possibilities (rules 2 to 6) #77
-if (true) // rule 2:
+if (daysToExp <= 10) // rule 2:
 {
-  System.Console.WriteLine($"2");
+  System.Console.WriteLine("Your subscription will expire soon. Renew now!");
 } else if (true) // rule 3:
 {
   System.Console.WriteLine($"3");
