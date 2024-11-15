@@ -20,12 +20,29 @@ Console.WriteLine("");
 // 119-2 test above output
 // 119-3 assign -> current orderID in loop
 // Print out each orderID #120
-
+// 121-1 test a for loop
+// 121-2 apply to app
 Random random_value_generator = new Random(); // 116-1 - Create random instance (1 to 5)
 
-string[] OrderIDs = new string[5];
+// string[] OrderIDs = new string[5];
+string[] OrderIDs = ["5","4","3","2","1"];
 string FraudIDPrefix;
 int row = 1;
+
+// int OrderIDsLength = OrderIDs.Length; // 121-1 test a for loop
+// 121-2 apply to app
+
+// System.Console.WriteLine($"OrderIDsLength: {OrderIDsLength}");
+for (int i = 0; i < OrderIDs.Length; i++)
+{
+  // System.Console.WriteLine($"{i}");
+  OrderIDs[i] = "NewString666";
+}
+
+foreach (var item in OrderIDs)
+{
+  System.Console.WriteLine(item);
+}
 
 foreach (string orderID in OrderIDs) // 115-1 - Loop through each blank orderID
 {
@@ -40,8 +57,8 @@ foreach (string orderID in OrderIDs) // 115-1 - Loop through each blank orderID
   // System.Console.WriteLine($"random value with padding: {random_str_value}");
   
   // System.Console.WriteLine($"{FraudIDPrefix + random_str_value}"); //119-1,2 
-  orderID = FraudIDPrefix + random_str_value; // 119-3 assign -> current orderID in loop
-  System.Console.WriteLine($"{row}: {orderID}");
+  // orderID = FraudIDPrefix + random_str_value; // [# 121 bug] 119-3 assign -> current orderID in loop
+  // System.Console.WriteLine($"{row}: {orderID}");
   row++;
 }
 
