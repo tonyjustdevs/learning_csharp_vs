@@ -24,7 +24,10 @@ int row = 1;
 foreach (string orderID in OrderIDs) // 115-1 - Loop through each blank orderID
 {
   int ASCII_value = random_ASCII_generator.Next(1,5) + 64; // 116-2 - Create ASCII value: generate random val + 64
-  System.Console.WriteLine(ASCII_value);
+  // System.Console.WriteLine(ASCII_value);
+  // FraudIDPrefix = Convert.ToChar(65).ToString();
+  FraudIDPrefix = Convert.ToChar(ASCII_value).ToString(); // 117
+  System.Console.WriteLine($"{FraudIDPrefix}");
     
   System.Console.WriteLine($"{row}: {orderID}");
   row++;
