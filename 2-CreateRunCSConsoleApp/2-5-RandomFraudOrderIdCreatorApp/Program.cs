@@ -16,6 +16,9 @@ Console.WriteLine("");
 // 118-2 - apply ToString Padding "000"
 // 118-3 - test output
 // Combine the prefix and suffix together, then assign to current OrderID #119
+// 119-1 prefix + ran_val (string cat)
+// 119-2 test above output
+// 119-3 assign -> current orderID in loop
 // Print out each orderID #120
 
 Random random_value_generator = new Random(); // 116-1 - Create random instance (1 to 5)
@@ -32,18 +35,15 @@ foreach (string orderID in OrderIDs) // 115-1 - Loop through each blank orderID
   FraudIDPrefix = Convert.ToChar(ASCII_value).ToString(); // 117
   // System.Console.WriteLine($"{FraudIDPrefix}");
     
-  string random_value = random_value_generator.Next(1,1000).ToString("000"); // 8 to 008 // 118-1,2
+  string random_str_value = random_value_generator.Next(1,1000).ToString("000"); // 8 to 008 // 118-1,2
   // string random_value = random_value_generator.Next(1,1000).ToString(""); // 8 to 8 // 118-3
-  System.Console.WriteLine($"random value with padding: {random_value}");
+  // System.Console.WriteLine($"random value with padding: {random_str_value}");
   
+  // System.Console.WriteLine($"{FraudIDPrefix + random_str_value}"); //119-1,2 
+  orderID = FraudIDPrefix + random_str_value; // 119-3 assign -> current orderID in loop
   System.Console.WriteLine($"{row}: {orderID}");
   row++;
 }
-
-
-// 118-1 - random value between 1-1000
-// 118-2 - apply ToString Padding "000"
-// 118-3 - test output
 
 Console.WriteLine("");
 Console.WriteLine("---------------------------------------------");
