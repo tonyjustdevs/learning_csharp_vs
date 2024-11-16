@@ -17,6 +17,19 @@ Array.Reverse(input_array); //inplace operation
 
 System.Console.WriteLine(input_array);
 
+int o_counter = 0; 
+foreach (char letter in input_array) // loop through input_array
+{
+  if (letter == 'o')
+  {
+    o_counter++;
+    System.Console.Write(o_counter);
+  }
+  System.Console.Write(letter);
+
+}
+
+
 Console.WriteLine("");
 Console.WriteLine("-------------------------------------------");
 Console.WriteLine("--- Leaving Tony's Fraud-Metrics App ------");
