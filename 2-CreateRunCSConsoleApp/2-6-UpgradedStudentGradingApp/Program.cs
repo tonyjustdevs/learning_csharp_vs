@@ -13,6 +13,8 @@
 //          and sum the values. #138
 //  134-4a foreach loop scores and sum values
 // 2-6-134-Use an updated algorithm within the outer loop to calculate the average exam score for each student. #139
+//  134-5a if-else for each student
+//  134-5b reset to 0 for each student
 // 2-6-134-Use an if-elseif-else construct within the outer loop to evaluate the average exam score 
 //          and assign a letter grade automatically. #140
 // 2-6-134-Integrate extra credit scores when calculating the student's final score and letter grade as follows #141
@@ -33,18 +35,30 @@ int[] ollie_scores  = {90,85,87,98,68};
 int[] momo_scores   = {90,95,87,88,96}; 
 
 int[] current_scores = new int[5];
-int currentSum = 0;
 string current_student;
+
+Console.WriteLine("-------------------------");
+Console.WriteLine("Student\t\tGrade");
+Console.WriteLine("-------------------------");
 
 foreach (string student in student_names)                   // 134-2a foreach student in student_name
 {
-  // System.Console.WriteLine($"Student: {student}");          // 134-2b output: student
+  int currentSum = 0;                                       // 134-5b reset to 0 for each student
   current_student = student;
 
-  if (current_student == "oreo")
+  if (current_student == "oreo")                            // 134-5a if-else for each student
   {
     current_scores = oreo_scores;
-  }   
+  } else if (current_student == "lilo")
+  {
+    current_scores = lilo_scores;
+  } else if (current_student == "ollie")
+  {
+    current_scores = ollie_scores;
+  } else if (current_student == "momo")
+  {
+    current_scores = momo_scores;
+  }
 
   foreach (int score in current_scores)
   {
@@ -53,10 +67,9 @@ foreach (string student in student_names)                   // 134-2a foreach st
 
   decimal currentScore = (decimal)currentSum / currentAssignments;
 
-  Console.WriteLine("Student\t\tGrade\n");
-  Console.WriteLine($"{current_student}:\t\t" + currentScore + "\tA-");
+  Console.WriteLine($"{current_student}:\t\t" + currentScore + "\t?");
     
 }
 
-Console.WriteLine("Press the Enter key to continue");
-Console.ReadLine();
+// Console.WriteLine("Press the Enter key to continue");
+// Console.ReadLine();
