@@ -13,6 +13,9 @@ Console.WriteLine("");
 
 string input_str = "The quick brown fox jumps over the lazy dog.";
 char[] input_array = input_str.ToArray();
+Array.Reverse(input_array); //inplace operation
+
+System.Console.WriteLine(input_array);
 
 Console.WriteLine("");
 Console.WriteLine("-------------------------------------------");
