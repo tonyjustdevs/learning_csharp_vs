@@ -2,8 +2,9 @@
 // 2-6-134-Use arrays to store student names and assignment scores. #135
 // 134-1a array student_name
 // 134-1b array score
-
 // 2-6-134-Use a foreach statement to iterate through the student names as an outer program loop. #136
+// 134-2a foreach student in student_name
+// 134-2b output: student
 // 2-6-134-Use an if statement within the outer loop to identify the current student name and 
 //          access that student's assignment scores. #137
 // 2-6-134-Use a foreach statement within the outer loop to iterate through the assignment scores array 
@@ -27,6 +28,11 @@ int[] oreo_scores   = {90,86,87,98,100};                   // 134-1b array score
 int[] lilo_scores   = {92,89,81,96,90};
 int[] ollie_scores  = {90,85,87,98,68};
 int[] momo_scores   = {90,95,87,88,96}; 
+
+foreach (string student in student_names)                 // 134-2a foreach student in student_name
+{
+  System.Console.WriteLine($"Student: {student}");        // 134-2b output: student
+}
 
 // int oreoSum = 0;
 // int liloSum = 0;
