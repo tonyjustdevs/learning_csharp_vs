@@ -37,9 +37,9 @@ int[] momo_scores   = {90,95,87,88,96};
 int[] current_scores = new int[5];
 string current_student;
 
-Console.WriteLine("-------------------------");
+Console.WriteLine("--------------------------");
 Console.WriteLine("Student\t\tGrade");
-Console.WriteLine("-------------------------");
+Console.WriteLine("--------------------------");
 
 foreach (string student in student_names)                   // 134-2a foreach student in student_name
 {
@@ -67,9 +67,68 @@ foreach (string student in student_names)                   // 134-2a foreach st
 
   decimal currentScore = (decimal)currentSum / currentAssignments;
 
-  Console.WriteLine($"{current_student}:\t\t" + currentScore + "\t?");
+
+// 97 - 100   A+
+// 93 - 96    A
+// 90 - 92    A-
+// 87 - 89    B+
+// 83 - 86    B
+// 80 - 82    B-
+// 77 - 79    C+
+// 73 - 76    C
+// 70 - 72    C-
+// 67 - 69    D+
+// 63 - 66    D
+// 60 - 62    D-
+// 0  - 59    F
+  string currentGrade;
+
+  if (currentScore >= 97)
+  {
+    currentGrade = "A+";
+  } else if (currentScore >= 93)
+  {
+    currentGrade = "A";
+  } else if (currentScore >= 90)
+  {
+    currentGrade = "A-";
+  } else if (currentScore >= 87)
+  {
+    currentGrade = "B+";
+  } else if (currentScore >= 83)
+  {
+    currentGrade = "B";
+  } else if (currentScore >= 80)
+  {
+    currentGrade = "B-";
+  } else if (currentScore >= 77)
+  {
+    currentGrade = "C+";
+  } else if (currentScore >= 73)
+  {
+    currentGrade = "C";
+  } else if (currentScore >= 70)
+  {
+    currentGrade = "C-";
+  } else if (currentScore >= 67)
+  {
+    currentGrade = "D+";
+  } else if (currentScore >= 63)
+  {
+    currentGrade = "D";
+  } else if (currentScore >= 60)
+  {
+    currentGrade = "D-";
+  } else
+  {
+    currentGrade = "F";
+  }
+
+  
+  Console.WriteLine($"{current_student}:\t\t{currentScore}\t{currentGrade}");
     
 }
 
 // Console.WriteLine("Press the Enter key to continue");
 // Console.ReadLine();
+
