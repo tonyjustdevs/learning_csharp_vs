@@ -28,13 +28,19 @@
 //          student's scores array. #142
 // 2-6-134-Your code must apply the 10% weighting factor to extra credit assignments 
 //          before adding extra credit scores to the sum of exam scores. #143
-
+// 2-6-134-add: extra students names and scores and verify output #144
+// 2-6-134-refactor: for-loop to for-each of scores calculation #145
 using System;
 
 // initialize variables - graded assignments 
 int nbrCurrentAssignments = 5;
 
 string[] student_names = ["oreo", "lilo", "ollie","momo"];  // 134-1a array student_name
+string[] add_celebs_names = {"messi", "iniest", "jurgen", "pep"};
+
+student_names = student_names.Concat(add_celebs_names).ToArray(); //144
+System.Console.WriteLine(student_names);
+// string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor" };
 // int[] oreo_scores   = {90,86,87,98,100};                    // 134-1b array score
 // int[] lilo_scores   = {92,89,81,96,90};
 // int[] ollie_scores  = {90,85,87,98,68};
@@ -44,6 +50,17 @@ int[] oreo_scores   = {90,86,87,98,100,94,90};      // 134-6a add extra credit a
 int[] lilo_scores   = {92,89,81,96,90,89};
 int[] ollie_scores  = {90,85,87,98,68,89,89,89};
 int[] momo_scores   = {90,95,87,88,96,96}; 
+
+// int[] sophiaScores = new int[] { 90, 86, 87, 98, 100, 94, 90 };
+// int[] andrewScores = new int[] { 92, 89, 81, 96, 90, 89 };
+// int[] emmaScores = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
+// int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
+int[] messi_scores = new int[] { 92, 91, 90, 91, 92, 92, 92 };
+int[] iniesta_scores = new int[] { 84, 86, 88, 90, 92, 94, 96, 98 };
+int[] jurgen_scores = new int[] { 80, 90, 100, 80, 90, 100, 80, 90 };
+int[] pep_scores = new int[] { 91, 91, 91, 91, 91, 91, 91 };    
+
+
 int[] current_scores = new int[5];
 string current_student;
 
@@ -69,6 +86,18 @@ foreach (string student in student_names)                   // 134-2a foreach st
   } else if (current_student == "momo")
   {
     current_scores = momo_scores;
+  } else if (current_student == "messi")
+  {
+    current_scores = messi_scores;
+  } else if (current_student == "iniesta")
+  {
+    current_scores = iniesta_scores;
+  } else if (current_student == "jurgen")
+  {
+    current_scores = jurgen_scores;
+  } else if (current_student == "pep")
+  {
+    current_scores = pep_scores;
   }
 
   decimal sum_credit_score = 0;
