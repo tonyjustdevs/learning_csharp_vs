@@ -18,6 +18,12 @@
 // 2-6-134-Use an if-elseif-else construct within the outer loop to evaluate the average exam score 
 //          and assign a letter grade automatically. #140
 // 2-6-134-Integrate extra credit scores when calculating the student's final score and letter grade as follows #141
+//  134-6a add extra credit assignments
+//  Extra Credit Scores @ 10% per assignment:
+//    Sophia: 94, 90
+//    Andrew: 89
+//    Emma: 89, 89, 89
+//    Logan: 96
 // 2-6-134-Your code must detect extra credit assignments based on the number of elements in the 
 //          student's scores array. #142
 // 2-6-134-Your code must apply the 10% weighting factor to extra credit assignments 
@@ -26,24 +32,29 @@
 using System;
 
 // initialize variables - graded assignments 
-int currentAssignments = 5;
+int nbrCurrentAssignments = 5;
 
 string[] student_names = ["oreo", "lilo", "ollie","momo"];  // 134-1a array student_name
-int[] oreo_scores   = {90,86,87,98,100};                    // 134-1b array score
-int[] lilo_scores   = {92,89,81,96,90};
-int[] ollie_scores  = {90,85,87,98,68};
-int[] momo_scores   = {90,95,87,88,96}; 
+// int[] oreo_scores   = {90,86,87,98,100};                    // 134-1b array score
+// int[] lilo_scores   = {92,89,81,96,90};
+// int[] ollie_scores  = {90,85,87,98,68};
+// int[] momo_scores   = {90,95,87,88,96}; 
 
+int[] oreo_scores   = {90,86,87,98,100,94,90};      // 134-6a add extra credit assns
+int[] lilo_scores   = {92,89,81,96,90,89};
+int[] ollie_scores  = {90,85,87,98,68,89,89,89};
+int[] momo_scores   = {90,95,87,88,96,96}; 
 int[] current_scores = new int[5];
 string current_student;
 
-Console.WriteLine("--------------------------");
-Console.WriteLine("Student\t\tGrade");
-Console.WriteLine("--------------------------");
+Console.WriteLine("-------------------------------------------");
+Console.WriteLine("Student\t\tMark\tGrade\tAssignments");
+Console.WriteLine("-------------------------------------------");
 
 foreach (string student in student_names)                   // 134-2a foreach student in student_name
 {
-  int currentSum = 0;                                       // 134-5b reset to 0 for each student
+  // int currentSum = 0;                                       // 134-5b reset to 0 for each student
+  decimal currentSum = 0;                                       // 134-5b reset to 0 for each student
   current_student = student;
 
   if (current_student == "oreo")                            // 134-5a if-else for each student
@@ -60,13 +71,24 @@ foreach (string student in student_names)                   // 134-2a foreach st
     current_scores = momo_scores;
   }
 
-  foreach (int score in current_scores)
+  decimal sum_credit_score = 0;
+  int extra_credit_counter = 0;
+  for (int i = 0; i < current_scores.Length; i++) //0-score_leng
   {
-    currentSum += score;
+    if (i<nbrCurrentAssignments) //0-4
+    {
+      currentSum += current_scores[i]; // score is as i, or 100%
+    }
+    else
+    {
+      // extra_credit_counter++;
+      currentSum += current_scores[i]/10; // any score after first 5 is worth 10%
+    }
   }
-
-  decimal currentScore = (decimal)currentSum / currentAssignments;
-
+  // System.Console.WriteLine($"extra credit: {sum_credit_score} counter: {extra_credit_counter}");
+  // decimal currentScore = (decimal)(currentSum+sum_credit_score)/(nbrCurrentAssignments+extra_credit_counter);
+  decimal currentScore = (decimal)currentSum / nbrCurrentAssignments; // calc over first 5 assn
+  // currentScore += (decimal)sum_credit`_score/extra_credit_counter; // add extra extra;
 
 // 97 - 100   A+
 // 93 - 96    A
@@ -125,7 +147,7 @@ foreach (string student in student_names)                   // 134-2a foreach st
   }
 
   
-  Console.WriteLine($"{current_student}:\t\t{currentScore}\t{currentGrade}");
+  Console.WriteLine($"{current_student}:\t\t{currentScore}\t{currentGrade}\t{current_scores.Length}");
     
 }
 
