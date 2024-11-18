@@ -5,20 +5,17 @@ Console.WriteLine("----------------------------------------------------");
 Console.WriteLine("");
 
 //////////////// 1. PARAMS ////////////////
-//// A: [TESTING PARAMS] ////
-int[] sales = {600,900,1000,1200,1300};
-
-//// B: [STATIC PARAMS] ////
+int[] sales = {600,900,1000,1001,999,1200,300,1300,2000,30};
 int sales_minimum_for_discount_good = 1000;
+int discount = 0;
 
 //////////////// 2. METHODS ////////////////
-//// A: [CONDITIONAL-OPERATOR] ////
-int discount_co = sales[0] > sales_minimum_for_discount_good ? 100 : 50;
-// int discount_co = sales > sales_minimum_for_discount_good ? 100 : 50;
-
-//////////////// 3. OUTPUT ////////////////
-System.Console.Write($"Sales:\t{sales[0]}\t\t");
-System.Console.WriteLine($"Discount:\t{discount_co} ");
+foreach (int current_sales in sales)
+{
+  System.Console.Write($"{current_sales} - ");
+  discount = current_sales > sales_minimum_for_discount_good ? 100 : 50;
+  System.Console.WriteLine(discount);
+} 
 
 Console.WriteLine("");
 Console.WriteLine("-----------------------------------------------------");
