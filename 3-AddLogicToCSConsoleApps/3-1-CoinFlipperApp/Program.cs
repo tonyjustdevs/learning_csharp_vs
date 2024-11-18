@@ -16,8 +16,9 @@ Random coin = new Random();
 //////////////// 2. METHODS ////////////////
 int toss_value = coin.Next(0,2);
 
-//////////////// 3. OUTPUT ////////////////
 string toss_result = (toss_value==1) ? "Heads 🤯!" : "Tails 🐈!";
+
+//////////////// 3. OUTPUT ////////////////
 System.Console.WriteLine(toss_result);
 
 //////////////// END CODE ////////////////
