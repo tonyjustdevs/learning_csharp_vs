@@ -6,7 +6,6 @@ Console.WriteLine("");
 //////////////////////// START PROGRAM ////////////////////////
 
 // ref: https://learn.microsoft.com/en-us/training/modules/csharp-evaluate-boolean-expressions/6-challenge-2
-// tip: To sufficiently test all of the combinations for permission and level
 
 /*  
 You will need to use the Contains() helper method  to determine whether the value 
@@ -41,17 +40,71 @@ Console.WriteLine(permissions); // Outputs: Edit access
 
 */
 
-
-
 //////////////////////// 1. PARAMS ////////////////////////////
-string permission = "Admin|Manager";  // starter-code
-int level = 55;                       // starter-code
+// string permission = "Admin|Manager";   // starter-code
+int level = 55;                           // starter-code
+string permission = "Admin";              // initial-configuration
+
+// [RULE] permission: "Admin"   &&  level > 55    ->  "Welcome, Super Admin user."
+// permission = "Admin"; level = 420;
+// System.Console.WriteLine("Expected: 'Welcome, Super Admin user.'");
+
+// [RULE] permission: "Admin"   &&  level <= 55,  ->  "Welcome, Admin user"
+// permission = "Admin"; level = 33;
+// System.Console.WriteLine("Expected: 'Welcome, Admin user'");
+
+// [RULE] permission: "Manager"  &&  level >= 20, ->  "Contact an Admin for access."
+// permission = "Manager"; level = 20;
+// System.Console.WriteLine("Expected: 'Contact an Admin for access.'");
+
+// [RULE] permission: "Manager"  &&  level < 20,  ->  "You do not have sufficient privileges."
+// permission = "Manager"; level = 19;
+// System.Console.WriteLine("Expected: 'You do not have sufficient privileges.'");
+
+// [RULE] permission: !("Admin" || "Manager")     ->  "You do not have sufficient privileges."
+// permission = "Hacker"; level = 69;
+// System.Console.WriteLine("Expected: 'You do not have sufficient privileges.'");
+
+// [RULE] permission: !("Admin" || "Manager")     ->  "You do not have sufficient privileges."
+// permission = "Admin "; level= 100;
+// System.Console.WriteLine("Expected: 'You do not have sufficient privileges.'");
+
+
+// static params
+string output = "Something went wrong!";
 
 //////////////////////// 2. METHODS ///////////////////////////
+if (permission=="Admin")
+{
+  if (level > 55)
+  {
+    output = "Welcome, Super Admin user";
+  } else
+  {
+    output = "Welcome, Admin user";;
+  }
+} else if (permission=="Manager")
+{
+  if (level >= 20)
+  {
+    output = "Contact an Admin for access.";
+  } else
+  {
+    output = "You do not have sufficient privileges.";
+  }
+} else
+{
+  output = "You do not have sufficient privileges.";
+}
+// permission: "Admin"   &&  level > 55    ->  "Welcome, Super Admin user."
+// permission: "Admin"   &&  level <= 55,  ->  "Welcome, Admin user"
+// permission: "Manager"  &&  level >= 20, ->  "Contact an Admin for access."
+// permission: "Manager"  &&  level < 20,  ->  "You do not have sufficient privileges."
+// permission: !("Admin" || "Manager")     ->  "You do not have sufficient privileges."
 
 //////////////////////// 3. OUTPUT ////////////////////////////
-
-
+System.Console.Write(output);
+System.Console.WriteLine($"\t(permission: {permission}, level:{level})");
 
 
 
