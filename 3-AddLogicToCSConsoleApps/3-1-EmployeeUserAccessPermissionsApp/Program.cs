@@ -40,10 +40,20 @@ Console.WriteLine(permissions); // Outputs: Edit access
 
 */
 
+/*
+[REQUREMENT]: 
+"You will need to use the Contains() helper method to determine whether the value assigned 
+to the permission string contains one of the permission values specified by the "business rules". 
+For example, the expression permission.Contains("Admin") will return true when using the 
+initial data values specified in the code above."
+Reference: https://learn.microsoft.com/en-us/training/modules/csharp-evaluate-boolean-expressions/6-challenge-2
+*/
+
 //////////////////////// 1. PARAMS ////////////////////////////
-// string permission = "Admin|Manager";   // starter-code
+string permission = "Admin|Manager";   // starter-code
+
 int level = 55;                           // starter-code
-string permission = "Admin";              // initial-configuration
+// string permission = "Admin";              // initial-configuration
 
 // [RULE] permission: "Admin"   &&  level > 55    ->  "Welcome, Super Admin user."
 // permission = "Admin"; level = 420;
@@ -58,8 +68,8 @@ string permission = "Admin";              // initial-configuration
 // System.Console.WriteLine("Expected: 'Contact an Admin for access.'");
 
 // [RULE] permission: "Manager"  &&  level < 20,  ->  "You do not have sufficient privileges."
-// permission = "Manager"; level = 19;
-// System.Console.WriteLine("Expected: 'You do not have sufficient privileges.'");
+permission = "Manager"; level = 19;
+System.Console.WriteLine("Expected: 'You do not have sufficient privileges.'");
 
 // [RULE] permission: !("Admin" || "Manager")     ->  "You do not have sufficient privileges."
 // permission = "Hacker"; level = 69;
@@ -74,7 +84,9 @@ string permission = "Admin";              // initial-configuration
 string output = "Something went wrong!";
 
 //////////////////////// 2. METHODS ///////////////////////////
-if (permission=="Admin")
+
+// if (permission=="Admin")
+if (permission.Contains("Admin"))           // #196
 {
   if (level > 55)
   {
