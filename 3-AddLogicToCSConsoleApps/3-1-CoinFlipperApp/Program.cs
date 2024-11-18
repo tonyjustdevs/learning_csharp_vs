@@ -9,17 +9,17 @@ Console.WriteLine("");
 //     Consider the range of numbers that is required.
 // Use conditional operator to display either heads or tails. #188
 //     There should be a 50% chance that the result is either heads or tails.
-
+// refactor: to one liner inside writeline #189
 //////////////// 1. PARAMS ////////////////
 Random coin = new Random();
 
 //////////////// 2. METHODS ////////////////
-int toss_value = coin.Next(0,2);
+// int toss_value = coin.Next(0,2);
 
-string toss_result = (toss_value==1) ? "Heads 🤯!" : "Tails 🐈!";
+// string toss_result = (coin.Next(0,2)==1) ? "Heads 🤯!" : "Tails 🐈!";
 
 //////////////// 3. OUTPUT ////////////////
-System.Console.WriteLine(toss_result);
+System.Console.WriteLine((coin.Next(0,2)==1) ? "Heads 🤯!" : "Tails 🐈!");
 
 //////////////// END CODE ////////////////
 
